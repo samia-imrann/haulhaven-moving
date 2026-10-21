@@ -1,26 +1,18 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import MapSection from '../components/MapSection';
+import PageHeader from '../components/PageHeader';
 
 export default function Contact() {
   return (
     <div className="bg-[#F5F7FA] min-h-screen">
 
-      {/* Page Header with your custom image */}
-      <section className="relative pt-32 pb-16 text-left text-white overflow-hidden bg-[#102A43]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-100"
-          style={{ backgroundImage: "url('/contact-bg.jpeg')" }}
-        ></div>
-        <div className="absolute inset-0 bg-[#102A43]/80"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 uppercase tracking-wider">Contact Us</h1>
-          <p className="text-lg text-blue-100 max-w-2xl">
-            Ready to move? Get in touch with our team for a free, no-obligation quote.
-          </p>
-        </div>
-      </section>
+      {/* Page Header (Reusable Component) */}
+      <PageHeader
+        title="Contact Us"
+        subtitle="Ready to move? Get in touch with our team for a free, no-obligation quote."
+        bgImage="/contact-bg.jpeg"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -31,7 +23,6 @@ export default function Contact() {
 
           <div className="lg:col-span-5 space-y-6">
 
-            {/* Top Card (Exact Inspo Style) */}
             {/* Top Card (Blue with Gray Ombre, Yellow Text) */}
             <div className="bg-gradient-to-br from-[#102A43] to-[#526579] rounded-2xl shadow-md border border-white/10 p-8 relative overflow-hidden">
               {/* Decorative ombre shapes */}
@@ -52,10 +43,10 @@ export default function Contact() {
 
             {/* Bottom Card (Image + WhatsApp) */}
             <div className="relative rounded-2xl shadow-md overflow-hidden h-80 bg-slate-800">
-              {/* To use your own Dallas image, save it in public and change this to: url('/dallas.jpeg') */}
+              {/* Dallas Image */}
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-70"
-                style={{ backgroundImage: "url('dallas.jpeg')" }}
+                style={{ backgroundImage: "url('/dallas.jpeg')" }}
               ></div>
 
               {/* Overlay for readability */}

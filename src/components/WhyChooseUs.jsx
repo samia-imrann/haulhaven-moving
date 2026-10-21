@@ -9,21 +9,26 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-24 bg-[#102A43] text-white">
+    <section className="py-24 bg-[#102A43] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose HaulHaven?</h2>
           <p className="text-lg text-blue-100">We go the extra mile to ensure your moving day is stress-free.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {features.map((feature, idx) => (
-            <div key={idx} className="text-center bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="w-16 h-16 mx-auto bg-[#F4B942] rounded-2xl flex items-center justify-center mb-6 text-[#102A43] shadow-lg">
-                <feature.icon size={32} />
+            <div
+              key={idx}
+              className="relative overflow-hidden text-center bg-gradient-to-b from-[#1A365D] to-[#142E4D] p-8 rounded-2xl border border-white/5 shadow-lg group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(244,185,66,0.2)] hover:border-[#F4B942]/30 transition-all duration-300"
+            >
+              <div className="relative z-10 flex flex-col items-center">
+                <div className="w-16 h-16 bg-[#F4B942] rounded-2xl flex items-center justify-center mb-6 text-[#102A43] shadow-[0_0_20px_rgba(244,185,66,0.3)] group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon size={32} />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#F4B942] transition-colors">{feature.title}</h3>
+                <p className="text-blue-200 text-sm leading-relaxed">{feature.desc}</p>
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-blue-200">{feature.desc}</p>
             </div>
           ))}
         </div>
