@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 bg-blue-900 text-white">
+    <section className="py-24 bg-[#102A43] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose HaulHaven?</h2>
@@ -18,11 +18,11 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, idx) => (
-            <div key={idx} className="text-center">
-              <div className="w-16 h-16 mx-auto bg-blue-800 rounded-full flex items-center justify-center mb-4 text-amber-400">
+            <div key={idx} className="text-center bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+              <div className="w-16 h-16 mx-auto bg-[#F4B942] rounded-2xl flex items-center justify-center mb-6 text-[#102A43] shadow-lg">
                 <feature.icon size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
               <p className="text-blue-200">{feature.desc}</p>
             </div>
           ))}
